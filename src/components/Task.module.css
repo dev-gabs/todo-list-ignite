@@ -1,0 +1,72 @@
+.task {
+  width: 100%;
+  background-color: var(--gray-500);
+  border: 0.1rem solid var(--gray-400);
+  border-radius: 0.8rem;
+
+  padding: 1.6rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskContent {
+  display: flex;
+  align-items: start;
+  gap: 1.2rem;
+
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.taskContent input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.taskContent input:checked ~ p {
+  color: var(--gray-300);
+  text-decoration: line-through;
+
+  transition: 0.1s;
+}
+
+.checked,
+.taskContent input:checked ~ .unchecked {
+  display: none;
+}
+
+.taskContent input:checked ~ .checked {
+  display: initial;
+}
+
+.taskContent p {
+  width: 63.2rem;
+  transition: 0.1s;
+}
+
+.task > button {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: none;
+  background-color: transparent;
+  color: var(--gray-300);
+  border-radius: 0.4rem;
+  filter: drop-shadow(0 0 4px #00000030);
+
+  transition: 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task > button:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
+
+  transition: 0.2s;
+}

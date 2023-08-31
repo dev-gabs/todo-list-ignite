@@ -1,3 +1,48 @@
 .wrapper {
-  
+  padding-top: 17.3rem;
+
+  max-width: 73.6rem;
+  margin: 0 auto;
+}
+
+.taskTitles {
+  margin-top: 6.4rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  padding-bottom: 2.4rem;
+}
+
+.createdTasks {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: var(--blue);
+}
+
+.doneTasks {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: var(--purple);
+}
+
+.counter {
+  width: 2.5rem;
+  height: 1.9rem;
+  background-color: var(--gray-400);
+  border-radius: 999rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+  color: var(--gray-100);
 }
