@@ -34,6 +34,12 @@ export function TaskArea() {
 
   const isNewTaskEmpty = newTaskText.length === 0
 
+  let localTasks = JSON.stringify(tasks)
+
+  localStorage.setItem('tasks', localTasks)
+
+  let arrayLocalTasks = JSON.parse(localTasks)
+
   return(
       <div className={styles.wrapper}>
         <form onSubmit={handleCreateNewTask} className={styles.inputWrapper}>
@@ -61,12 +67,12 @@ export function TaskArea() {
           </div>
         </div>
         <div id='taskList'className={styles.taskArea}>
-          {tasks.map(task => {
+          {arrayLocalTasks.map((task, index) => {
             return (
               <Task
                 text={task}
                 onDeleteTask={deleteTask}
-                id={task}
+                key={index}
               />
             )
           })}
