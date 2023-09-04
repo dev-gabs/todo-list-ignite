@@ -67,6 +67,7 @@
 .task > button:hover {
   background-color: var(--gray-400);
   color: var(--danger);
+  cursor: pointer;
 
   transition: 0.2s;
 }

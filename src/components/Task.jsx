@@ -2,28 +2,31 @@ import { Trash } from 'phosphor-react'
 import styles from './Task.module.css'
 import unchecked from '../assets/unchecked.svg'
 import checked from '../assets/checked.svg'
-import { useState } from 'react'
+import { Children } from 'react'
 
-export function Task({id}) {
+export function Task({id, text, onDeleteTask}) {
+  function handleDeleteTask() {
+    onDeleteTask(text)
+  }
 
-
-
+  
+  const test = document.getElementById('taskList').children
+  console.log(test)
 
   return(
-    <div className={styles.task}>
-      <label htmlFor={id} className={styles.taskContent}>
+    <div className={styles.task} id={id}>
+      <label className={styles.taskContent}>
         <input 
           type="checkbox"  
           name="task"
-          id={id}
         />
         <img className={styles.unchecked} src={unchecked} alt="" />
         <img className={styles.checked} src={checked} alt="" />
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, eaque aut maiores quasi aliquam rerum ad totam ratione eos voluptatum repellendus vitae consequuntur sit tempora, ut modi doloremque eligendi labore?</p>
+        <p>{text}</p>
       </label>
       
-      <button>
+      <button onClick={handleDeleteTask}>
         <Trash size={14}/>
       </button>
     </div>

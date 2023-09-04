@@ -7,3 +7,120 @@
   border-top: 0.1rem solid var(--gray-400);
   border-radius: 0.8rem;
 }
+
+.wrapper {
+  padding-top: 17.3rem;
+
+  max-width: 73.6rem;
+  margin: 0 auto;
+}
+
+.taskTitles {
+  margin-top: 6.4rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  padding-bottom: 2.4rem;
+}
+
+.createdTasks {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: var(--blue);
+}
+
+.doneTasks {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: var(--purple);
+}
+
+.counter {
+  height: 1.9rem;
+  padding-inline: 0.8rem;
+  background-color: var(--gray-400);
+  border-radius: 999rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+  color: var(--gray-100);
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.input {
+  height: 5.2rem;
+  width: 63.8rem;
+  padding-left: 1.6rem;
+
+  border: 0;
+  border-radius: 0.8rem;
+  background-color: var(--gray-500);
+  border: 0.2rem var(--gray-500) solid;
+
+  font-size: 1.6rem;
+  color: var(--gray-100);
+
+  transition: 0.2s;
+}
+
+.input::placeholder {
+  color: var(--gray-300);
+}
+
+.input:focus,
+.input:not(:placeholder-shown) {
+  outline: none;
+  border: 0.2rem var(--purple-dark) solid;
+
+  transition: 0.2s;
+}
+
+.button {
+  height: 5.2rem;
+  width: 9rem;
+
+  border: 0;
+  border-radius: 0.8rem;
+  background-color: var(--blue-dark);
+
+  font-weight: bold;
+  color: var(--gray-100);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  transition: 0.2s;
+}
+
+.button:not(:disabled):hover {
+  background-color: var(--blue);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: var(--blue-dark);
+}
+
+.button:disabled {
+  background-color: var(--gray-400);
+  color: var(--gray-300);
+}
